@@ -9,14 +9,7 @@ if [ -z "$DOCKER_HUB_TAG" ]; then
 fi;
 echo "Using Docker Hub Repository: '$DOCKER_HUB_REPO' with tag '$DOCKER_HUB_TAG'."
 
-if [ -z "$(lsb_release -si)" ]; then
-  echo "WARNING: Unable to determine your distribution"
-  echo "(Is lsb_release installed?)"
-  echo "Using Ubuntu Dockerfile."
-  HOST_OS="Ubuntu"
-else
-  HOST_OS=$(lsb_release -si)
-fi
+HOST_OS="Ubuntu"
 
 mkdir -p ./online-branding-iceinfo/iceinfo
 rm -rf ./online-branding-iceinfo/iceinfo/*
