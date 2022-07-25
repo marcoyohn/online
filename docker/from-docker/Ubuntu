@@ -1,0 +1,5 @@
+FROM collabora/code:latest
+
+# add iceinfo branding
+ADD /online-branding-iceinfo/iceinfo /usr/share/coolwsd/browser/dist/iceinfo
+
