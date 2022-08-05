@@ -164,3 +164,4 @@ Makecache
 
 # autoconf stuff
 autogen.input
+.DS_Store
