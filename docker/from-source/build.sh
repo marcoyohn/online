@@ -146,6 +146,7 @@ if test -d online-branding ; then
 fi
 
 ##### custom theme and fonts #####
+cd "$SRCDIR"
 cp -R ../../../online-branding-iceinfo/iceinfo "$INSTDIR/usr/share/coolwsd/browser/dist/iceinfo"
 
 mkdir -p "$INSTDIR/usr/share/fonts"
