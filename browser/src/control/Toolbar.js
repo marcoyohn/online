@@ -39,6 +39,28 @@ L.Map.include({
 	createFontSelector: function(nodeSelector) {
 		var that = this;
 
+		var convertFontName = function(fontName) {
+			if(fontName == 'FangSong') {
+				return '仿宋';
+			} else if(fontName == 'NSimSun') {
+				return '新宋体';
+			}  else if(fontName == 'SimSun') {
+				return '宋体';
+			} else if(fontName == 'SimHei') {
+				return '黑体';
+			} else if(fontName == 'Microsoft YaHei') {
+				return '微软雅黑';
+			} else if(fontName == 'Microsoft YaHei Light') {
+				return '微软雅黑Light';
+			} else if(fontName == 'Microsoft YaHei UI') {
+				return '微软雅黑UI';
+			} else if(fontName == 'Microsoft YaHei UI Light') {
+				return '微软雅黑UILigh';
+			}
+
+			return fontName;
+		}
+		
 		var fontcombobox = $(nodeSelector);
 		if (!fontcombobox.hasClass('select2')) {
 			fontcombobox.select2({
@@ -60,7 +82,7 @@ L.Map.include({
 				if (!data[i]) continue;
 				var option = document.createElement('option');
 				option.text = data[i];
-				option.value = data[i];
+				option.value = convertFontName(data[i]);
 				fontcombobox.append(option);
 			}
 			fontcombobox.on('select2:select', that.onFontSelect.bind(that));
