@@ -3,6 +3,16 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+# 更新操作系统字体
+# chmod -R 777 /usr/share/fonts/Fonts
+cd /usr/share/fonts/Fonts/
+#sudo mkfontscale
+#sudo mkfontdir
+fc-cache -fv
+
+# 更新libreoffice字体
+# coolconfig update-system-template
+
 # Refresh repos otherwise installations later may fail
 apt-get update
 

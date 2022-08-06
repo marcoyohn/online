@@ -1,5 +1,12 @@
 FROM collabora/code:latest
 
 # add iceinfo branding
-ADD /online-branding-iceinfo/iceinfo /usr/share/coolwsd/browser/dist/iceinfo
+ADD /instdir/online-branding-iceinfo/iceinfo /usr/share/coolwsd/browser/dist/iceinfo
 
+# add fonts
+ADD /instdir/WindowsFonts /usr/share/fonts/WindowsFonts
+
+# run install-custom-ubuntu
+ADD /scripts/install-custom-ubuntu.sh /
+RUN bash install-custom-ubuntu.sh
+# RUN rm -rf /install-custom-ubuntu.sh
