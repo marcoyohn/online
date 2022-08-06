@@ -81,8 +81,8 @@ L.Map.include({
 			for (var i = 0; i < data.length; ++i) {
 				if (!data[i]) continue;
 				var option = document.createElement('option');
-				option.text = data[i];
-				option.value = convertFontName(data[i]);
+				option.text = convertFontName(data[i]);
+				option.value = data[i];
 				fontcombobox.append(option);
 			}
 			fontcombobox.on('select2:select', that.onFontSelect.bind(that));
