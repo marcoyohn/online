@@ -314,7 +314,7 @@ m4_ifelse(MOBILEAPP,[true],
       window.socketProxy = false;
       window.tileSize = 256;
       window.uiDefaults = {};
-      window.useIntegrationTheme = 'false';
+      window.useIntegrationTheme = 'true';
       window.checkFileInfoOverride = {};],
      [window.host = '%HOST%';
       window.serviceRoot = '%SERVICE_ROOT%';
