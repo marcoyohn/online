@@ -1811,14 +1811,14 @@ L.Control.JSDialogBuilder = L.Control.extend({
 				}
 				if (windowZhFontsStr.indexOf(data[i]) != -1) {
 					var option = windowZhFontsOptions[data.entries[index]];
-					option.value = index+";" + option.value;
+					option.value = index + ';' + option.value;
 					if (isSelected) {
 						option.selected = true;
 						hasSelectedEntry = true;
 					}
 				} else {
 					var option = L.DomUtil.create('option', '', listbox);
-					option.value = index+";"+data.entries[index];
+					option.value = index+';'+data.entries[index];
 					option.innerText = data.entries[index];
 					if (isSelected) {
 						option.selected = true;
@@ -1831,7 +1831,7 @@ L.Control.JSDialogBuilder = L.Control.extend({
 		if (!hasSelectedEntry) {
 			if (title) {
 				var newOption = L.DomUtil.create('option', '', listbox);
-				newOption.value = ++index+";"+title;
+				newOption.value = ++index+';'+title;
 				newOption.innerText = title;
 				newOption.selected = true;
 			} else
