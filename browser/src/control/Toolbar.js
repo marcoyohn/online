@@ -95,13 +95,11 @@ L.Map.include({
 				}
 			});
 
-			if (!found && state) {
-				fontcombobox
-					.append($('<option></option>')
-						.text(state));
+			if (!found) {
+				fontcombobox.val('');
+			} else {
+				fontcombobox.val(state).trigger('change');
 			}
-
-			fontcombobox.val(state).trigger('change');
 		};
 
 		var onFontListChanged = function(e) {

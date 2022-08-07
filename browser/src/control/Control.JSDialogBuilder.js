@@ -1851,13 +1851,7 @@ L.Control.JSDialogBuilder = L.Control.extend({
 		}
 		// no selected entry; set the visible value to empty string unless the font is not included in the entries
 		if (!hasSelectedEntry) {
-			if (title) {
-				var newOption = L.DomUtil.create('option', '', listbox);
-				newOption.value = ++index+';'+title;
-				newOption.innerText = title;
-				newOption.selected = true;
-			} else
-				$(listbox).val('');
+			$(listbox).val('');
 		}
 
 		return false;

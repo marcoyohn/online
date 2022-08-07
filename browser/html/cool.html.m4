@@ -362,7 +362,7 @@ brandingLink.setAttribute("type", "text/css");
 
 var theme_name = document.getElementsByName("theme")[[0]] ? document.getElementsByName("theme")[[0]].value : '';
 var theme_prefix = '';
-if(window.useIntegrationTheme === 'true' && theme_name !== '') {
+if(theme_name !== '') {
     theme_prefix = theme_name + '/';
 }
 
