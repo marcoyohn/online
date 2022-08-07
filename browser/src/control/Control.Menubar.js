@@ -449,7 +449,7 @@ L.Control.Menubar = L.Control.extend({
 
 			]},
 			{name: _UNO('.uno:HelpMenu', 'presentation'), id: 'help', type: 'menu', menu: [
-				{name: L.Control.MenubarShortcuts.addShortcut(_('Keyboard shortcuts'), L.Control.MenubarShortcuts.shortcuts.KEYBOARD_SHORTCUTS), id: 'keyboard-shortcuts', type: 'action', iosapp: false}
+				{name: L.Control.MenubarShortcuts.addShortcut(_('Keyboard shortcuts'), L.Control.MenubarShortcuts.shortcuts.KEYBOARD_SHORTCUTS), id: 'keyboard-shortcuts', type: 'action', iosapp: false}]
 			},
 			{name: _('Last modification'), id: 'last-mod', type: 'action', tablet: false}
 		],
@@ -559,7 +559,7 @@ L.Control.Menubar = L.Control.extend({
 					{name: _('None (Do not check spelling)'), id: 'nonelanguage', uno: '.uno:LanguageStatus?Language:string=Default_LANGUAGE_NONE'}]}
 			]},
 			{name: _UNO('.uno:HelpMenu', 'presentation'), id: 'help', type: 'menu', menu: [
-				{name: L.Control.MenubarShortcuts.addShortcut(_('Keyboard shortcuts'), L.Control.MenubarShortcuts.shortcuts.KEYBOARD_SHORTCUTS), id: 'keyboard-shortcuts', type: 'action', iosapp: false}
+				{name: L.Control.MenubarShortcuts.addShortcut(_('Keyboard shortcuts'), L.Control.MenubarShortcuts.shortcuts.KEYBOARD_SHORTCUTS), id: 'keyboard-shortcuts', type: 'action', iosapp: false}]
 			},
 			{name: _('Last modification'), id: 'last-mod', type: 'action', tablet: false}
 		],
