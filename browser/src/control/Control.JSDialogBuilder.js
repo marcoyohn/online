@@ -1813,7 +1813,7 @@ L.Control.JSDialogBuilder = L.Control.extend({
 				var value = data.entries[index];
 				if ((data.selectedEntries && index == data.selectedEntries[0])
 					|| (data.selectedEntries && selectedEntryIsString && value === data.selectedEntries[0])
-					|| data.entries[index] == title) {
+					|| value == title) {
 					isSelected = true;
 				}
 				if (fontnamecombobox && windowZhFontsStr.indexOf(value) != -1) {
