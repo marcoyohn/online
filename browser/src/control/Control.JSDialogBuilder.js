@@ -1779,6 +1779,7 @@ L.Control.JSDialogBuilder = L.Control.extend({
 	},
 
 	_listboxControl: function(parentContainer, data, builder) {
+		var fontnamecombobox = data.id === 'fontnamecombobox'
 		var title = data.text;
 		var selectedEntryIsString = false;
 		if (data.selectedEntries) {
@@ -1813,21 +1814,25 @@ L.Control.JSDialogBuilder = L.Control.extend({
 			var windowZhFonts = [{en: 'SimSun', cn: '宋体'}, {en: 'NSimSun', cn: '新宋体'},{en: 'FangSong', cn: '仿宋'},{en: 'KaiTi', cn: '楷体'},{en: 'SimHei', cn: '黑体'},{en: 'Microsoft YaHei', cn: '微软雅黑'},{en: 'Microsoft YaHei Light', cn: '微软雅黑Light'},{en: 'Microsoft YaHei UI', cn: '微软雅黑UI'},{en: 'Microsoft YaHei UI Light', cn: '微软雅黑UILight'}];
 			var windowZhFontsStr = 'SimSun,NSimSun,FangSong,KaiTi,SimHei,Microsoft YaHei,Microsoft YaHei Light,Microsoft YaHei UI,Microsoft YaHei UI Light';
 			var windowZhFontsOptions = {};
-			for (var i = 0; i < windowZhFonts.length; ++i) {
-				var option = L.DomUtil.create('option', '', listbox);
-				option.value = windowZhFonts[i].en;
-				option.innerText = windowZhFonts[i].cn;
-				windowZhFontsOptions[option.value] = option;
+			if(fontnamecombobox) {
+				for (var i = 0; i < windowZhFonts.length; ++i) {
+					var option = L.DomUtil.create('option', '', listbox);
+					option.value = windowZhFonts[i].en;
+					option.innerText = windowZhFonts[i].cn;
+					windowZhFontsOptions[option.value] = option;
+				}
 			}
+			
 			for (var index in data.entries) {
 				var isSelected = false;
+				var value = data.entries[index];
 				if ((data.selectedEntries && index == data.selectedEntries[0])
-					|| (data.selectedEntries && selectedEntryIsString && data.entries[index] === data.selectedEntries[0])
+					|| (data.selectedEntries && selectedEntryIsString && value === data.selectedEntries[0])
 					|| data.entries[index] == title) {
 					isSelected = true;
 				}
-				if (windowZhFontsStr.indexOf(data[i]) != -1) {
-					var option = windowZhFontsOptions[data.entries[index]];
+				if (fontnamecombobox && windowZhFontsStr.indexOf(value) != -1) {
+					var option = windowZhFontsOptions[value];
 					option.value = index + ';' + option.value;
 					if (isSelected) {
 						option.selected = true;
@@ -1835,8 +1840,8 @@ L.Control.JSDialogBuilder = L.Control.extend({
 					}
 				} else {
 					var option = L.DomUtil.create('option', '', listbox);
-					option.value = index+';'+data.entries[index];
-					option.innerText = data.entries[index];
+					option.value = index+';'+value;
+					option.innerText = value;
 					if (isSelected) {
 						option.selected = true;
 						hasSelectedEntry = true;
