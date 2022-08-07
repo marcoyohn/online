@@ -123,27 +123,6 @@ L.Control.NotebookbarCalc = L.Control.NotebookbarWriter.extend({
 		}
 
 		content = content.concat([
-			{
-				'id': 'file-shareas-rev-history',
-				'type': 'container',
-				'children': [
-					hasShare ?
-						{
-							'id': 'ShareAs',
-							'type': 'menubartoolitem',
-							'text': _('Share'),
-							'command': '.uno:shareas'
-						} : {},
-					hasRevisionHistory ?
-						{
-							'id': 'Rev-History',
-							'type': 'menubartoolitem',
-							'text': _('See history'),
-							'command': '.uno:rev-history'
-						} : {},
-				],
-				'vertical': 'true'
-			},
 			hasPrint ?
 				{
 					'id': 'print',
