@@ -688,7 +688,7 @@ msgstr "顯示尺規"
 #: src/control/Control.NotebookbarImpress.js:375
 #: src/control/Control.NotebookbarWriter.js:1090
 msgid "Show Status Bar"
-msgstr ""
+msgstr "顯示狀態列"
 
 #: src/control/Control.Menubar.js:132 src/control/Control.Menubar.js:398
 #: src/control/Control.Menubar.js:527 src/control/Control.Menubar.js:655
@@ -708,19 +708,19 @@ msgstr "文字方向"
 
 #: src/control/Control.Menubar.js:296 src/control/Control.Menubar.js:1119
 msgid "Insert Rich Text"
-msgstr ""
+msgstr "插入富文本"
 
 #: src/control/Control.Menubar.js:297 src/control/Control.Menubar.js:1120
 msgid "Insert Checkbox"
-msgstr ""
+msgstr "插入複選框"
 
 #: src/control/Control.Menubar.js:298 src/control/Control.Menubar.js:1121
 msgid "Insert Dropdown"
-msgstr ""
+msgstr "插入下拉"
 
 #: src/control/Control.Menubar.js:299 src/control/Control.Menubar.js:1122
 msgid "Insert Picture"
-msgstr ""
+msgstr "插入圖片"
 
 #: src/control/Control.Menubar.js:300 src/control/Control.Menubar.js:1123
 #, fuzzy
@@ -734,7 +734,7 @@ msgstr "插入表格"
 #: src/control/Control.NotebookbarWriter.js:271
 #: src/control/Control.NotebookbarWriter.js:1008
 msgid "Properties"
-msgstr ""
+msgstr "屬性"
 
 #: src/control/Control.Menubar.js:329
 #: src/control/Control.NotebookbarWriter.js:295
@@ -877,11 +877,11 @@ msgstr "重設回預設語言"
 
 #: src/control/Control.Menubar.js:1612
 msgid "Use Compact view"
-msgstr ""
+msgstr "常規視圖"
 
 #: src/control/Control.Menubar.js:1614
 msgid "Use Tabbed view"
-msgstr ""
+msgstr "選項卡視圖"
 
 #: src/control/Control.Menubar.js:1650 src/control/Control.Menubar.js:1663
 msgid "Read-only mode"
@@ -1059,7 +1059,7 @@ msgstr ""
 #: src/control/Control.NotebookbarImpress.js:224
 #: src/control/Control.NotebookbarWriter.js:185
 msgid "Download"
-msgstr ""
+msgstr "下載"
 
 #: src/control/Control.NotebookbarCalc.js:198
 #, fuzzy
@@ -1134,11 +1134,11 @@ msgstr ""
 
 #: src/control/Control.NotebookbarCalc.js:761
 msgid "Row Height"
-msgstr ""
+msgstr "行"
 
 #: src/control/Control.NotebookbarCalc.js:767
 msgid "Column Width"
-msgstr ""
+msgstr "列"
 
 #: src/control/Control.NotebookbarCalc.js:778
 #, fuzzy
@@ -1175,18 +1175,18 @@ msgstr "欄"
 #: src/control/Control.NotebookbarImpress.js:368
 #: src/control/Control.NotebookbarWriter.js:1066
 msgid "Compact view"
-msgstr ""
+msgstr "常规视图"
 
 #: src/control/Control.NotebookbarCalc.js:996
 #: src/control/Control.NotebookbarDraw.js:277
 #: src/control/Control.NotebookbarImpress.js:374
 #: src/control/Control.NotebookbarWriter.js:1089
 msgid "Status Bar"
-msgstr ""
+msgstr "状态栏"
 
 #: src/control/Control.NotebookbarCalc.js:1052
 msgid "Sparkline"
-msgstr ""
+msgstr "隐藏"
 
 #: src/control/Control.NotebookbarCalc.js:1131
 #: src/control/Control.NotebookbarCalc.js:1778
@@ -1227,7 +1227,7 @@ msgstr "ODF 簡報 (.odp)"
 #: src/control/Control.NotebookbarImpress.js:322
 #: src/control/Control.NotebookbarImpress.js:792
 msgid "Presentation"
-msgstr ""
+msgstr "播放投影片"
 
 #: src/control/Control.NotebookbarWriter.js:33
 msgid "Reference~s"
@@ -1235,7 +1235,7 @@ msgstr ""
 
 #: src/control/Control.NotebookbarWriter.js:48
 msgid "Form"
-msgstr ""
+msgstr "表單"
 
 #: src/control/Control.NotebookbarWriter.js:195
 #, fuzzy
@@ -1248,23 +1248,23 @@ msgstr ""
 
 #: src/control/Control.NotebookbarWriter.js:983
 msgid "Rich Text"
-msgstr ""
+msgstr "富文本"
 
 #: src/control/Control.NotebookbarWriter.js:988
 msgid "Checkbox"
-msgstr ""
+msgstr "複選框"
 
 #: src/control/Control.NotebookbarWriter.js:993
 msgid "Dropdown"
-msgstr ""
+msgstr "下拉"
 
 #: src/control/Control.NotebookbarWriter.js:998
 msgid "Picture"
-msgstr ""
+msgstr "圖片"
 
 #: src/control/Control.NotebookbarWriter.js:1078
 msgid "Ruler"
-msgstr ""
+msgstr "尺規"
 
 #: src/control/Control.PartsPreview.js:180
 msgid "preview of page "

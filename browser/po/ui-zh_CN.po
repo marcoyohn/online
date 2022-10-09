@@ -703,19 +703,19 @@ msgstr "文字方向"
 
 #: src/control/Control.Menubar.js:296 src/control/Control.Menubar.js:1119
 msgid "Insert Rich Text"
-msgstr ""
+msgstr "插入富文本"
 
 #: src/control/Control.Menubar.js:297 src/control/Control.Menubar.js:1120
 msgid "Insert Checkbox"
-msgstr ""
+msgstr "插入复选框"
 
 #: src/control/Control.Menubar.js:298 src/control/Control.Menubar.js:1121
 msgid "Insert Dropdown"
-msgstr ""
+msgstr "插入下拉"
 
 #: src/control/Control.Menubar.js:299 src/control/Control.Menubar.js:1122
 msgid "Insert Picture"
-msgstr ""
+msgstr "插入图片"
 
 #: src/control/Control.Menubar.js:300 src/control/Control.Menubar.js:1123
 msgid "Insert Date"
@@ -728,7 +728,7 @@ msgstr "插入日期"
 #: src/control/Control.NotebookbarWriter.js:271
 #: src/control/Control.NotebookbarWriter.js:1008
 msgid "Properties"
-msgstr ""
+msgstr "属性"
 
 #: src/control/Control.Menubar.js:329
 #: src/control/Control.NotebookbarWriter.js:295
@@ -869,11 +869,11 @@ msgstr "重置为默认语言"
 
 #: src/control/Control.Menubar.js:1612
 msgid "Use Compact view"
-msgstr ""
+msgstr "常规视图"
 
 #: src/control/Control.Menubar.js:1614
 msgid "Use Tabbed view"
-msgstr ""
+msgstr "选项卡视图"
 
 #: src/control/Control.Menubar.js:1650 src/control/Control.Menubar.js:1663
 msgid "Read-only mode"
@@ -1049,7 +1049,7 @@ msgstr "查看历史记录"
 #: src/control/Control.NotebookbarImpress.js:224
 #: src/control/Control.NotebookbarWriter.js:185
 msgid "Download"
-msgstr ""
+msgstr "下载"
 
 #: src/control/Control.NotebookbarCalc.js:198
 msgid "ODF Spreadsheet (.ods)"
@@ -1122,11 +1122,11 @@ msgstr ""
 
 #: src/control/Control.NotebookbarCalc.js:761
 msgid "Row Height"
-msgstr ""
+msgstr "行"
 
 #: src/control/Control.NotebookbarCalc.js:767
 msgid "Column Width"
-msgstr ""
+msgstr "列"
 
 #: src/control/Control.NotebookbarCalc.js:778
 msgid "Insert Rows Above"
@@ -1157,18 +1157,18 @@ msgstr "删除列"
 #: src/control/Control.NotebookbarImpress.js:368
 #: src/control/Control.NotebookbarWriter.js:1066
 msgid "Compact view"
-msgstr ""
+msgstr "常规视图"
 
 #: src/control/Control.NotebookbarCalc.js:996
 #: src/control/Control.NotebookbarDraw.js:277
 #: src/control/Control.NotebookbarImpress.js:374
 #: src/control/Control.NotebookbarWriter.js:1089
 msgid "Status Bar"
-msgstr ""
+msgstr "状态栏"
 
 #: src/control/Control.NotebookbarCalc.js:1052
 msgid "Sparkline"
-msgstr ""
+msgstr "隐藏"
 
 #: src/control/Control.NotebookbarCalc.js:1131
 #: src/control/Control.NotebookbarCalc.js:1778
@@ -1208,7 +1208,7 @@ msgstr "ODF 演示文稿 (.odp)"
 #: src/control/Control.NotebookbarImpress.js:322
 #: src/control/Control.NotebookbarImpress.js:792
 msgid "Presentation"
-msgstr ""
+msgstr "幻灯片放映"
 
 #: src/control/Control.NotebookbarWriter.js:33
 msgid "Reference~s"
@@ -1216,7 +1216,7 @@ msgstr "引用(~S)"
 
 #: src/control/Control.NotebookbarWriter.js:48
 msgid "Form"
-msgstr ""
+msgstr "表单"
 
 #: src/control/Control.NotebookbarWriter.js:195
 msgid "ODF Text Document (.odt)"
@@ -1228,23 +1228,23 @@ msgstr "EPUB 文档（.epub）"
 
 #: src/control/Control.NotebookbarWriter.js:983
 msgid "Rich Text"
-msgstr ""
+msgstr "富文本"
 
 #: src/control/Control.NotebookbarWriter.js:988
 msgid "Checkbox"
-msgstr ""
+msgstr "复选框"
 
 #: src/control/Control.NotebookbarWriter.js:993
 msgid "Dropdown"
-msgstr ""
+msgstr "下拉"
 
 #: src/control/Control.NotebookbarWriter.js:998
 msgid "Picture"
-msgstr ""
+msgstr "图片"
 
 #: src/control/Control.NotebookbarWriter.js:1078
 msgid "Ruler"
-msgstr ""
+msgstr "标尺"
 
 #: src/control/Control.PartsPreview.js:180
 msgid "preview of page "
