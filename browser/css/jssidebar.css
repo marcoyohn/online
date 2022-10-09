@@ -140,6 +140,7 @@
 #masterslidebutton {
 	line-height: 22px;
 	min-width: 121px;
+	display: none;
 }
 
 div#negativenumbersred.checkbutton.jsdialog.sidebar,

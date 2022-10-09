@@ -372,7 +372,6 @@ L.Control.Menubar = L.Control.extend({
 				   {name: _('Show Status Bar'), id: 'showstatusbar', type: 'action'},
 				   {uno: '.uno:Sidebar'},
 				   {type: 'separator'},
-				   {uno: '.uno:SlideMasterPage'},
 				   {uno: '.uno:ModifyPage'},
 				   {uno: '.uno:SlideChangeWindow'},
 				   {uno: '.uno:CustomAnimation'},
