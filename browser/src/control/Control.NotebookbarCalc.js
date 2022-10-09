@@ -996,11 +996,6 @@ L.Control.NotebookbarCalc = L.Control.NotebookbarWriter.extend({
 				'command': '.uno:InsertObjectChart'
 			},
 			{
-				'type': 'bigtoolitem',
-				'text': _('Sparkline'),
-				'command': '.uno:InsertSparkline'
-			},
-			{
 				'id': 'Insert-Section-PivotTable-Ext',
 				'type': 'container',
 				'children': [
@@ -1479,12 +1474,6 @@ L.Control.NotebookbarCalc = L.Control.NotebookbarWriter.extend({
 				'type': 'bigtoolitem',
 				'text': _UNO('.uno:TransformDialog'),
 				'command': '.uno:TransformDialog'
-			},
-			{
-				'id': 'Format-SparklineMenu:FormatSparklineMenu',
-				'type': 'menubutton',
-				'text': _UNO('.uno:FormatSparklineMenu', 'spreadsheet'),
-				'enabled': 'true'
 			},
 		];
 
