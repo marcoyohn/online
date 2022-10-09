@@ -2556,7 +2556,7 @@ L.Control.JSDialogBuilder = L.Control.extend({
 			'insertindexesentry': 'insertmultiindex',
 			'paperheight': 'pageheight',
 			'masterslidespanel': 'masterslide',
-			'slidemasterpage': 'masterslide',
+			//'slidemasterpage': 'masterslide',
 			'tabledeletemenu': 'deletetable',
 			'tracechangemode': 'trackchanges',
 			'deleteallannotation': 'deleteallnotes',
