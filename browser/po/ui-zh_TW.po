@@ -2086,6 +2086,12 @@ msgid ""
 "kbd><span class=\"kbd--plus\">+</span><kbd>V</kbd></td></tr><tr><td>Copy</"
 "td><td>Cut</td><td>Paste</td></tr></table>"
 msgstr ""
+"<p>您的瀏覽器對剪貼板的存取權限非常有限，囙此請使用以下鍵盤快速鍵:</p>"
+"<table class=\"warn-copy-paste\"><tr><td><kbd>Ctrl</"
+"kbd><span class=\"kbd--plus\">+</span><kbd>C</kbd></td><td><kbd>Ctrl</"
+"kbd><span class=\"kbd--plus\">+</span><kbd>X</kbd></td><td><kbd>Ctrl</"
+"kbd><span class=\"kbd--plus\">+</span><kbd>V</kbd></td></tr><tr><td>複製</"
+"td><td>剪切</td><td>粘帖</td></tr></table>"
 
 #: src/map/Clipboard.js:873
 msgid ""
