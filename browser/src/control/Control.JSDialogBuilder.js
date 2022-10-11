@@ -3187,6 +3187,11 @@ L.Control.JSDialogBuilder = L.Control.extend({
 	},
 
 	_menuItemHandler: function(parentContainer, data, builder) {
+		var kishCommandName = data.command && data.command.startsWith('.uno:') ? data.command.substring('.uno:'.length) : data.id;
+		if (builder.map.getDocType() === 'spreadsheet' &&  kishCommandName && kishCommandName.toLowerCase() == 'delete') {
+			return;
+		}
+		
 		var title = data.text;
 		// separator
 		if (title === '') {
