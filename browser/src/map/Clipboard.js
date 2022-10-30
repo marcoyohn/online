@@ -615,24 +615,71 @@ L.Clipboard = L.Class.extend({
 			} catch (error) {
 				window.app.console.warn('Failed to post-message: ' + error);
 			}
+			// 申请使用剪切板读取权限
+			navigator.permissions.query({ name: 'clipboard-read' }).then(function(result) {
+				// 可能是 'granted', 'denied' or 'prompt':
+				result.onchange = function() {
+					console.log(`状态改变 ${this.state}`, this.state)
+				}
+				if (result.state === 'granted') {
+					// 可以使用权限
+					// 进行clipboard的操作
+					navigator.clipboard
+						.read()
+						.then(clipboardItems => {
+							var clipboardItem = clipboardItems[0];
+							if (clipboardItem.types.length == 1) {
+								clipboardItem.getType(clipboardItem.types[0]).then(blob => {
+									blob.text().then(text => {
+										L.Map.THIS._textInput._sendCompositionEvent(text);
+									});
+								  });
+							} else if (clipboardItem.types.length > 1) {
+								L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
+							}
+						})
+						.catch(err => {
+							// 读取剪切板内容失败
+							console.error('Failed to read clipboard contents: ', err);
+						});
+				} else if (result.state === 'prompt') {
+					// 弹窗弹框申请使用权限
+					navigator.clipboard.read().then(clipboardItems => {});
+					result.onchange = function() {
+						if (result.state === 'granted') {
+							L.Map.THIS.focus();
+							L.Map.THIS._textInput.focus();
+							navigator.clipboard
+							.read()
+							.then(clipboardItems => {
+								var clipboardItem = clipboardItems[0];
+								if (clipboardItem.types.length == 1) {
+								clipboardItem.getType(clipboardItem.types[0]).then(blob => {
+									blob.text().then(text => {
+									L.Map.THIS._textInput._sendCompositionEvent(text);
+									});
+									});
+								} else if (clipboardItem.types.length > 1) {
+								L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
+								}
+							})
+							.catch(err => {
+								// 读取剪切板内容失败
+								console.error('Failed to read clipboard contents: ', err);
+							});
+						}
+					}
+				} else {
+					// 如果被拒绝，请不要做任何操作。
+					vex.dialog.alert({
+						unsafeMessage: '<p>请在浏览器隐私设置中设置允许查看您的剪贴板.</p>',
+						callback: function () {
+							L.Map.THIS.focus();
+						}
+					});
+				}
+			});
 		}
-
-		// wait and see if we get some help
-		var that = this;
-		clearTimeout(this._failedTimer);
-		setTimeout(function() {
-			if (that._clipboardSerial !== serial)
-			{
-				window.app.console.log('successful ' + operation);
-				if (operation === 'paste')
-					that._stopHideDownload();
-			}
-			else
-			{
-				window.app.console.log('help did not arrive for ' + operation);
-				that._warnCopyPaste();
-			}
-		}, 150 /* ms */);
 	},
 
 	// Pull UNO clipboard commands out from menus and normal user input.
