@@ -623,11 +623,11 @@ L.Clipboard = L.Class.extend({
 					// 进行clipboard的操作
 					navigator.clipboard
 						.read()
-						.then(clipboardItems => {
+						.then(function(clipboardItems){
 							var clipboardItem = clipboardItems[0];
 							if (clipboardItem.types.length == 1) {
-								clipboardItem.getType(clipboardItem.types[0]).then(blob => {
-									blob.text().then(text => {
+								clipboardItem.getType(clipboardItem.types[0]).then(function(blob) {
+									blob.text().then(function(text) {
 										L.Map.THIS._textInput._sendCompositionEvent(text);
 									});
 								  });
@@ -635,35 +635,35 @@ L.Clipboard = L.Class.extend({
 								L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
 							}
 						})
-						.catch(err => {
+						.catch(function(err) {
 							// 读取剪切板内容失败
 							console.error('Failed to read clipboard contents: ', err);
 						});
 				} else if (result.state === 'prompt') {
 					// 弹窗弹框申请使用权限
-					navigator.clipboard.read().then(clipboardItems => {});
+					navigator.clipboard.read().then(function(clipboardItems) {});
 					result.onchange = function() {
 						if (result.state === 'granted') {
 							L.Map.THIS.focus();
 							L.Map.THIS._textInput.focus();
 							navigator.clipboard
-							.read()
-							.then(clipboardItems => {
-								var clipboardItem = clipboardItems[0];
-								if (clipboardItem.types.length == 1) {
-								clipboardItem.getType(clipboardItem.types[0]).then(blob => {
-									blob.text().then(text => {
-									L.Map.THIS._textInput._sendCompositionEvent(text);
-									});
-									});
-								} else if (clipboardItem.types.length > 1) {
-								L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
-								}
-							})
-							.catch(err => {
-								// 读取剪切板内容失败
-								console.error('Failed to read clipboard contents: ', err);
-							});
+								.read()
+								.then(function(clipboardItems){
+									var clipboardItem = clipboardItems[0];
+									if (clipboardItem.types.length == 1) {
+										clipboardItem.getType(clipboardItem.types[0]).then(function(blob) {
+											blob.text().then(function(text) {
+												L.Map.THIS._textInput._sendCompositionEvent(text);
+											});
+										});
+									} else if (clipboardItem.types.length > 1) {
+										L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
+									}
+								})
+								.catch(function(err) {
+									// 读取剪切板内容失败
+									console.error('Failed to read clipboard contents: ', err);
+								});
 						}
 					}
 				} else {
