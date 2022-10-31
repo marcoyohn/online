@@ -644,42 +644,23 @@ L.Clipboard = L.Class.extend({
 						.catch(function(err) {
 							// 读取剪切板内容失败
 							console.error('Failed to read clipboard contents: ', err);
+							L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
 						});
 				} else if (result.state === 'prompt') {
 					// 弹窗弹框申请使用权限
 					navigator.clipboard.read().then(function() {});
 					result.onchange = function() {
-						if (result.state === 'granted') {
-							L.Map.THIS.focus();
-							L.Map.THIS._textInput.focus();
-							navigator.clipboard
-								.read()
-								.then(function(clipboardItems) {
-									var clipboardItem = clipboardItems[0];
-									if (clipboardItem.types.length == 1) {
-										clipboardItem.getType(clipboardItem.types[0]).then(function(blob) {
-											blob.text().then(function(text) {
-												L.Map.THIS._textInput._sendCompositionEvent(text);
-											});
-										});
-									} else if (clipboardItem.types.length > 1) {
-										L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
-									}
-								})
-								.catch(function(err) {
-									// 读取剪切板内容失败
-									console.error('Failed to read clipboard contents: ', err);
-								});
-						}
+						L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
 					};
 				} else {
 					// 如果被拒绝，请不要做任何操作。
-					vex.dialog.alert({
-						unsafeMessage: '<p>请在浏览器隐私设置中设置允许查看您的剪贴板.</p>',
-						callback: function () {
-							L.Map.THIS.focus();
-						}
-					});
+					//vex.dialog.alert({
+					//	unsafeMessage: '<p>请在浏览器隐私设置中设置允许查看您的剪贴板.</p>',
+					//	callback: function () {
+					//		L.Map.THIS.focus();
+					//	}
+					//});
+					L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
 				}
 			});
 		}
