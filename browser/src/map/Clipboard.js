@@ -618,9 +618,6 @@ L.Clipboard = L.Class.extend({
 			// 申请使用剪切板读取权限
 			navigator.permissions.query({ name: 'clipboard-read' }).then(function(result) {
 				// 可能是 'granted', 'denied' or 'prompt':
-				result.onchange = function() {
-					console.log(`状态改变 ${this.state}`, this.state)
-				}
 				if (result.state === 'granted') {
 					// 可以使用权限
 					// 进行clipboard的操作
