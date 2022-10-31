@@ -623,7 +623,7 @@ L.Clipboard = L.Class.extend({
 					// 进行clipboard的操作
 					navigator.clipboard
 						.read()
-						.then(function(clipboardItems){
+						.then(function(clipboardItems) {
 							var clipboardItem = clipboardItems[0];
 							if (clipboardItem.types.length == 1) {
 								clipboardItem.getType(clipboardItem.types[0]).then(function(blob) {
@@ -641,14 +641,14 @@ L.Clipboard = L.Class.extend({
 						});
 				} else if (result.state === 'prompt') {
 					// 弹窗弹框申请使用权限
-					navigator.clipboard.read().then(function(clipboardItems) {});
+					navigator.clipboard.read().then(function() {});
 					result.onchange = function() {
 						if (result.state === 'granted') {
 							L.Map.THIS.focus();
 							L.Map.THIS._textInput.focus();
 							navigator.clipboard
 								.read()
-								.then(function(clipboardItems){
+								.then(function(clipboardItems) {
 									var clipboardItem = clipboardItems[0];
 									if (clipboardItem.types.length == 1) {
 										clipboardItem.getType(clipboardItem.types[0]).then(function(blob) {
@@ -665,7 +665,7 @@ L.Clipboard = L.Class.extend({
 									console.error('Failed to read clipboard contents: ', err);
 								});
 						}
-					}
+					};
 				} else {
 					// 如果被拒绝，请不要做任何操作。
 					vex.dialog.alert({
