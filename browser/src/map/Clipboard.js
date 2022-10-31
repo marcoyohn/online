@@ -615,6 +615,12 @@ L.Clipboard = L.Class.extend({
 			} catch (error) {
 				window.app.console.warn('Failed to post-message: ' + error);
 			}
+
+			// 是否支持navigator.clipboard api
+			if(!navigator.clipboard) {
+				that._warnCopyPaste();
+				return;
+			}
 			// 申请使用剪切板读取权限
 			navigator.permissions.query({ name: 'clipboard-read' }).then(function(result) {
 				// 可能是 'granted', 'denied' or 'prompt':
