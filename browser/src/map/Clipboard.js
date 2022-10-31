@@ -618,7 +618,7 @@ L.Clipboard = L.Class.extend({
 
 			// 是否支持navigator.clipboard api
 			if (!navigator.clipboard) {
-				this._warnCopyPaste();
+				L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
 				return;
 			}
 			// 申请使用剪切板读取权限
