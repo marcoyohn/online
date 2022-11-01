@@ -616,7 +616,7 @@ L.Clipboard = L.Class.extend({
 				window.app.console.warn('Failed to post-message: ' + error);
 			}
 
-			try{
+			try {
 				// 是否支持navigator.clipboard api
 				if (!navigator.clipboard) {
 					L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
@@ -665,7 +665,7 @@ L.Clipboard = L.Class.extend({
 					}
 				});
 			} catch (error) {
-				console.error('Failed to read clipboard contents: ', err);
+				console.error('Failed to read clipboard contents: ', error);
 				L.Map.THIS._clip._doInternalPaste(L.Map.THIS, true);
 			}
 			
