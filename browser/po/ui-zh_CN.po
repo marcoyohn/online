@@ -2020,7 +2020,7 @@ msgstr "删除"
 
 #: src/layer/tile/CommentListSection.ts:822
 msgid "Remove Thread"
-msgstr ""
+msgstr "删除全部"
 
 #: src/layer/tile/CommentListSection.ts:828
 msgid "Resolve"
@@ -2032,11 +2032,11 @@ msgstr "未解决"
 
 #: src/layer/tile/CommentListSection.ts:834
 msgid "Unresolve Thread"
-msgstr ""
+msgstr "未解决全部"
 
 #: src/layer/tile/CommentListSection.ts:834
 msgid "Resolve Thread"
-msgstr ""
+msgstr "解决全部"
 
 #: src/layer/tile/CommentSection.ts:260
 msgid "Open menu"
